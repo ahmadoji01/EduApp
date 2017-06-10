@@ -20,14 +20,16 @@ class RegisterActivity : AppCompatActivity() {
             if(savedInstanceState != null)
                 return
 
-            var registerPageOne: Register1Fragment = Register1Fragment()
-            registerPageOne.arguments = intent.extras
+            registerPageOne = Register1Fragment()
+            registerPageOne?.arguments = intent.extras
             supportFragmentManager.beginTransaction()
                     .add(R.id.register_fragment_container, registerPageOne).commit()
         }
     }
 
-    private val mStartButtonClick = View.OnClickListener {
-
+    fun changePageTwo() {
+        registerPageTwo = Register2Fragment()
+        supportFragmentManager.beginTransaction()
+                .replace(R.id.register_fragment_container, registerPageTwo).commit()
     }
 }

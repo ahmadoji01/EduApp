@@ -55,29 +55,14 @@ class LoginFragment : Fragment(), LoginContract.View {
         mLoginPresenter = LoginPresenter(this, LoginAPI())
     }
 
-    private val mRegisterTextViewPressed = View.OnClickListener {
-        mLoginPresenter?.onRegisterTextViewClick()
-    }
+    private val mRegisterTextViewPressed = View.OnClickListener { mLoginPresenter?.onRegisterTextViewClick() }
+    private val mLoginButtonPressed = View.OnClickListener { mLoginPresenter?.onLoginButtonClick() }
 
-    private val mLoginButtonPressed = View.OnClickListener {
-        mLoginPresenter?.onLoginButtonClick()
-    }
-
-    override fun getUsername(): String {
-        return mUsernameEditText?.text.toString()
-    }
-
-    override fun setUsernameEmptyErrorMsg(resId: Int) {
-        mUsernameEditText?.setError(getString(resId))
-    }
-
-    override fun getPassword(): String {
-        return mPasswordEditText?.text.toString()
-    }
-
-    override fun setPasswordEmptyErrorMsg(resId: Int) {
-        mPasswordEditText?.setError(getString(resId))
-    }
+    override fun getUsername(): String { return mUsernameEditText?.text.toString() }
+    override fun setUsernameEmptyErrorMsg(resId: Int) { mUsernameEditText?.setError(getString(resId)) }
+    override fun getPassword(): String { return mPasswordEditText?.text.toString() }
+    override fun setPasswordEmptyErrorMsg(resId: Int) { mPasswordEditText?.setError(getString(resId)) }
+    override fun showIncorrectLoginMsg() { Toast.makeText(context, R.string.username_password_incorrect_string, Toast.LENGTH_SHORT).show() }
 
     override fun gotoMainMenu() {
         val intent: Intent = Intent(activity, HomeActivity::class.java)
@@ -91,8 +76,5 @@ class LoginFragment : Fragment(), LoginContract.View {
         activity.finish()
     }
 
-    override fun showIncorrectLoginMsg() {
-        Toast.makeText(context, R.string.username_password_incorrect_string, Toast.LENGTH_SHORT).show()
-    }
 
 }

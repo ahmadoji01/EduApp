@@ -12,6 +12,8 @@ class RegisterContract {
         fun getPassword(): String
         fun getGrup(): Int
         fun getPeran(): Int
+        fun gotoRegisterPageTwo()
+        fun gotoRegisterPageThree()
     }
 
 }

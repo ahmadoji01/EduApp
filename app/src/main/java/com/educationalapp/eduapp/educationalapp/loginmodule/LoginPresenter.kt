@@ -41,7 +41,5 @@ class LoginPresenter(view: LoginContract.View, loginAPI: LoginAPI) {
         view?.showIncorrectLoginMsg()
     }
 
-    fun onRegisterTextViewClick() {
-        view?.gotoRegister()
-    }
+    fun onRegisterTextViewClick() { view?.gotoRegister() }
 }
