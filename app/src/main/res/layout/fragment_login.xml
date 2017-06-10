@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.educationalapp.eduapp.educationalapp.loginmodule.LoginActivity"
+    android:background="@drawable/loginbg"
+    android:orientation="vertical">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:inputType="text"
+            android:background="@drawable/apptheme_edit_text_holo_light"
+            android:textColorHint="#fff"
+            android:id="@+id/FragmentLogin_username_et" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:background="@drawable/apptheme_edit_text_holo_light"
+            android:textColorHint="#fff"
+            android:id="@+id/FragmentLogin_password_et" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:background="@color/colorButtonBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_margin="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="16dp"
+        android:id="@+id/FragmentLogin_login_btn" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/FragmentLogin_forgot_password_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/forgot_password_string"
+            android:textColor="#fff"
+            android:textSize="14dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical|left" />
+
+        <TextView
+            android:id="@+id/FragmentLogin_register_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/register_string"
+            android:textColor="#fff"
+            android:textSize="14dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical|right" />
+
+    </LinearLayout>
+
+</LinearLayout>

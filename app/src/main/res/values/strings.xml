@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">EducationalApp</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btn_login_string">Login</string>
+    <string name="username_empty_string">Username is empty</string>
+    <string name="password_empty_string">Password is empty</string>
+    <string name="no_user_string">User does not exist</string>
+    <string name="password_incorrect_string">Password is incorrect</string>
+    <string name="username_password_incorrect_string">Username or password is incorrect</string>
+    <string name="register_string">New? Register Here</string>
+    <string name="forgot_password_string">Forgot Password?</string>
+    <string name="next_string">Next</string>
+    <string name="register_start_string">Ayo mulai petualanganmu sekarang!</string>
+    <string name="start_string">Start</string>
+</resources>

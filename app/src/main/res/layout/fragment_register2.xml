@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.educationalapp.eduapp.educationalapp.registermodule.Register2Fragment"
+    android:orientation="vertical">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Lengkap"
+            android:inputType="text"
+            android:background="@drawable/apptheme_edit_text_holo_light"
+            android:textColorHint="#fff"
+            android:id="@+id/FragmentRegister_fullname_et" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/apptheme_edit_text_holo_light"
+            android:textColorHint="#fff"
+            android:id="@+id/FragmentRegister_email_et" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:inputType="text"
+            android:background="@drawable/apptheme_edit_text_holo_light"
+            android:textColorHint="#fff"
+            android:id="@+id/FragmentRegister_username_et" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:background="@drawable/apptheme_edit_text_holo_light"
+            android:textColorHint="#fff"
+            android:id="@+id/FragmentRegister_password_et" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:background="@drawable/apptheme_edit_text_holo_light"
+            android:textColorHint="#fff"
+            android:id="@+id/FragmentRegister_confirm_password_et" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:background="@color/colorButtonBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/next_string"
+        android:layout_margin="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="16dp"
+        android:id="@+id/FragmentRegister_next1_btn" />
+
+</LinearLayout>
