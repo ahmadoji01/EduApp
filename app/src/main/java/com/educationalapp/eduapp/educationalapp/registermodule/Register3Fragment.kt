@@ -1,16 +1,22 @@
 package com.educationalapp.eduapp.educationalapp.registermodule
 
+import android.media.Image
+import android.nfc.Tag
 import android.os.Bundle
+import android.os.Debug
 import android.support.v4.app.Fragment
 import android.text.Editable
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 
 import com.educationalapp.eduapp.educationalapp.R
+import org.w3c.dom.Text
 
 /**
  * A simple [Fragment] subclass.
@@ -21,32 +27,35 @@ import com.educationalapp.eduapp.educationalapp.R
  * create an instance of this fragment.
  */
 class Register3Fragment : Fragment(), RegisterContract.View {
-    private var mRegisterPresenter: RegisterPresenter? = null
-    private var mNamaLengkapEditText: EditText? = null
-    private var mEmailEditText: EditText? = null
-    private var mUsernameEditText: EditText? = null
-    private var mPasswordEditText: EditText? = null
-    private var mConfirmPasswordEditText: EditText? = null
+
+    private var mNavLeftImageView: ImageView? = null
+    private var mNavRightImageView: ImageView? = null
+    private var mCharImageView: ImageView? = null
+    private var mCharName: TextView? = null
     private var mNextButton: Button? = null
+
+    private var charList: MutableList<Int> = mutableListOf<Int>()
+    private var charListPointer: Int = 0
+    private var charName: MutableList<String> = mutableListOf<String>()
+
+    private var mRegisterPresenter: RegisterPresenter? = null
     private var mRegisterActivity: RegisterActivity? = null
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         var view: View = inflater!!.inflate(R.layout.fragment_register3, container, false)
 
-        mNamaLengkapEditText = view.findViewById(R.id.FragmentRegister_fullname_et_2) as EditText
-        mEmailEditText = view.findViewById(R.id.FragmentRegister_email_et_2) as EditText
-        mUsernameEditText = view.findViewById(R.id.FragmentRegister_username_et_2) as EditText
-        mPasswordEditText = view.findViewById(R.id.FragmentRegister_password_et_2) as EditText
-        mConfirmPasswordEditText = view.findViewById(R.id.FragmentRegister_confirm_password_et_2) as EditText
+        mNavLeftImageView = view.findViewById(R.id.FragmentRegister_char_nav_left_iv) as ImageView
+        mNavRightImageView = view.findViewById(R.id.FragmentRegister_char_nav_right_iv) as ImageView
+        mCharImageView = view.findViewById(R.id.FragmentRegister_char_iv) as ImageView
+        mCharName = view.findViewById(R.id.FragmentRegister_charName_tv) as TextView
         mNextButton = view.findViewById(R.id.FragmentRegister_next_btn_2) as Button
         mRegisterActivity = activity as RegisterActivity
 
-        mNamaLengkapEditText?.setText(mRegisterActivity?.registerAPI?.getNamaLengkap(), TextView.BufferType.EDITABLE)
-        mEmailEditText?.setText(mRegisterActivity?.registerAPI?.getEmail(), TextView.BufferType.EDITABLE)
-        mUsernameEditText?.setText(mRegisterActivity?.registerAPI?.getUsername(), TextView.BufferType.EDITABLE)
-        mPasswordEditText?.setText(mRegisterActivity?.registerAPI?.getPassword(), TextView.BufferType.EDITABLE)
-        mConfirmPasswordEditText?.setText(mRegisterActivity?.registerAPI?.getConfirmPassword(), TextView.BufferType.EDITABLE)
+        populateChar()
+
+        mNavLeftImageView?.setOnClickListener(onNavLeftPressed)
+        mNavRightImageView?.setOnClickListener(onNavRightPressed)
 
         return view
     }
@@ -56,13 +65,44 @@ class Register3Fragment : Fragment(), RegisterContract.View {
         mRegisterPresenter = RegisterPresenter(this, mRegisterActivity!!)
     }
 
-    override fun getNamaLengkap(): String { return mNamaLengkapEditText?.text.toString() }
-    override fun getUsername(): String { return mUsernameEditText?.text.toString() }
-    override fun getPassword(): String { return mPasswordEditText?.text.toString() }
-    override fun getConfirmPassword(): String { return mConfirmPasswordEditText?.text.toString() }
-    override fun getEmail(): String { return mEmailEditText?.text.toString() }
+    private fun populateChar() {
+        charList.add(R.drawable.ic_apps_black_36dp)
+        charName.add("Apps")
+        charList.add(R.drawable.ic_cancel_black_36dp)
+        charName.add("Cancel")
+
+        mCharImageView?.setImageResource(charList.first())
+        mCharName?.text = charName.first()
+        charListPointer = 0
+    }
+
+    private val onNavLeftPressed = View.OnClickListener {
+        charListPointer--
+        if(charListPointer < 0)
+            charListPointer = charList.size - 1
+
+        mCharImageView?.setImageResource(charList[charListPointer])
+        mCharName?.text = charName[charListPointer]
+    }
+    private val onNavRightPressed = View.OnClickListener {
+        charListPointer++
+        if(charListPointer >= charList.size)
+            charListPointer = 0
+
+        mCharImageView?.setImageResource(charList[charListPointer])
+        mCharName?.text = charName[charListPointer]
+    }
+
+    override fun getNamaLengkap(): String { TODO("not implemented") }
+    override fun getUsername(): String { TODO("not implemented") }
+    override fun getPassword(): String { TODO("not implemented") }
+    override fun getConfirmPassword(): String { TODO("not implemented") }
+    override fun getEmail(): String { TODO("not implemented") }
     override fun getGrup(): Int { TODO("not implemented") }
     override fun getPeran(): Int { TODO("not implemented") }
     override fun gotoRegisterPageTwo() { TODO("not implemented") }
     override fun gotoRegisterPageThree() { TODO("not implemented") }
+    override fun gotoRegisterPageFive() { TODO("not implemented") }
+
+    override fun gotoRegisterPageFour() { TODO("not implemented") }
 }

@@ -59,6 +59,8 @@ class Register2Fragment : Fragment(), RegisterContract.View {
     override fun getGrup(): Int { TODO("not implemented") }
     override fun getPeran(): Int { TODO("not implemented") }
     override fun gotoRegisterPageTwo() { TODO("not implemented") }
+    override fun gotoRegisterPageFour() { TODO("not implemented") }
+    override fun gotoRegisterPageFive() { TODO("not implemented") }
 
     private val mNextButtonPressed = View.OnClickListener { mRegisterPresenter?.onNextButtonOneClick() }
     override fun gotoRegisterPageThree() { mRegisterActivity?.changePageThree() }

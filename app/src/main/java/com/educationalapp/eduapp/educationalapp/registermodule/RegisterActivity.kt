@@ -11,7 +11,6 @@ class RegisterActivity : AppCompatActivity() {
     private var registerPageTwo: Register2Fragment? = null
     private var registerPageThree: Register3Fragment? = null
     public var registerAPI: RegisterAPI? = null
-    private var registerPresenter: RegisterPresenter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,4 +41,6 @@ class RegisterActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction()
                 .replace(R.id.register_fragment_container, registerPageThree).commit()
     }
+
+    fun changePageFour() { }
 }

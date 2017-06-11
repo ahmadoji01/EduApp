@@ -1,89 +1,52 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.educationalapp.eduapp.educationalapp.registermodule.Register3Fragment"
     android:orientation="vertical">
 
-    <android.support.design.widget.TextInputLayout
+
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp">
+        android:gravity="center_vertical|center"
+        android:text="@string/pilih_karakter_title_string" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Nama Lengkap"
-            android:inputType="text"
-            android:background="@drawable/apptheme_edit_text_holo_light"
-            android:textColorHint="#fff"
-            android:id="@+id/FragmentRegister_fullname_et_2" />
-
-    </android.support.design.widget.TextInputLayout>
-
-    <android.support.design.widget.TextInputLayout
+    <TextView
+        android:id="@+id/FragmentRegister_charName_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp">
+        android:gravity="center_vertical|center"
+        android:text="" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:background="@drawable/apptheme_edit_text_holo_light"
-            android:textColorHint="#fff"
-            android:id="@+id/FragmentRegister_email_et_2" />
-
-    </android.support.design.widget.TextInputLayout>
-
-    <android.support.design.widget.TextInputLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp">
+        android:orientation="horizontal">
 
-        <EditText
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/FragmentRegister_char_nav_left_iv"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Username"
-            android:inputType="text"
-            android:background="@drawable/apptheme_edit_text_holo_light"
-            android:textColorHint="#fff"
-            android:id="@+id/FragmentRegister_username_et_2" />
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_chevron_left_black_36dp" />
 
-    </android.support.design.widget.TextInputLayout>
-
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp">
-
-        <EditText
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/FragmentRegister_char_iv"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:background="@drawable/apptheme_edit_text_holo_light"
-            android:textColorHint="#fff"
-            android:id="@+id/FragmentRegister_password_et_2" />
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_apps_black_36dp" />
 
-    </android.support.design.widget.TextInputLayout>
-
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp">
-
-        <EditText
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/FragmentRegister_char_nav_right_iv"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Confirm Password"
-            android:inputType="textPassword"
-            android:background="@drawable/apptheme_edit_text_holo_light"
-            android:textColorHint="#fff"
-            android:id="@+id/FragmentRegister_confirm_password_et_2" />
-
-    </android.support.design.widget.TextInputLayout>
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_chevron_right_black_36dp" />
+    </LinearLayout>
 
     <Button
         android:background="@color/colorButtonBlue"
@@ -94,5 +57,4 @@
         android:textColor="@android:color/white"
         android:textSize="16dp"
         android:id="@+id/FragmentRegister_next_btn_2" />
-
 </LinearLayout>

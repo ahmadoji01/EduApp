@@ -15,6 +15,8 @@ class RegisterContract {
         fun getPeran(): Int
         fun gotoRegisterPageTwo()
         fun gotoRegisterPageThree()
+        fun gotoRegisterPageFour()
+        fun gotoRegisterPageFive()
     }
 
 }
