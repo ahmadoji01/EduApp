@@ -6,10 +6,11 @@ package com.educationalapp.eduapp.educationalapp.registermodule
 class RegisterContract {
 
     public interface View {
-        fun getNamaPanjang(): String
+        fun getNamaLengkap(): String
         fun getEmail(): String
         fun getUsername(): String
         fun getPassword(): String
+        fun getConfirmPassword(): String
         fun getGrup(): Int
         fun getPeran(): Int
         fun gotoRegisterPageTwo()

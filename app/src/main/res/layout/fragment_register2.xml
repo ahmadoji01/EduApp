@@ -17,7 +17,7 @@
             android:inputType="text"
             android:background="@drawable/apptheme_edit_text_holo_light"
             android:textColorHint="#fff"
-            android:id="@+id/FragmentRegister_fullname_et" />
+            android:id="@+id/FragmentRegister_fullname_et_1" />
 
     </android.support.design.widget.TextInputLayout>
 
@@ -33,7 +33,7 @@
             android:inputType="textEmailAddress"
             android:background="@drawable/apptheme_edit_text_holo_light"
             android:textColorHint="#fff"
-            android:id="@+id/FragmentRegister_email_et" />
+            android:id="@+id/FragmentRegister_email_et_1" />
 
     </android.support.design.widget.TextInputLayout>
 
@@ -49,7 +49,7 @@
             android:inputType="text"
             android:background="@drawable/apptheme_edit_text_holo_light"
             android:textColorHint="#fff"
-            android:id="@+id/FragmentRegister_username_et" />
+            android:id="@+id/FragmentRegister_username_et_1" />
 
     </android.support.design.widget.TextInputLayout>
 
@@ -65,7 +65,7 @@
             android:inputType="textPassword"
             android:background="@drawable/apptheme_edit_text_holo_light"
             android:textColorHint="#fff"
-            android:id="@+id/FragmentRegister_password_et" />
+            android:id="@+id/FragmentRegister_password_et_1" />
 
     </android.support.design.widget.TextInputLayout>
 
@@ -81,7 +81,7 @@
             android:inputType="textPassword"
             android:background="@drawable/apptheme_edit_text_holo_light"
             android:textColorHint="#fff"
-            android:id="@+id/FragmentRegister_confirm_password_et" />
+            android:id="@+id/FragmentRegister_confirm_password_et_1" />
 
     </android.support.design.widget.TextInputLayout>
 
@@ -93,6 +93,6 @@
         android:layout_margin="10dp"
         android:textColor="@android:color/white"
         android:textSize="16dp"
-        android:id="@+id/FragmentRegister_next1_btn" />
+        android:id="@+id/FragmentRegister_next_btn_1" />
 
 </LinearLayout>

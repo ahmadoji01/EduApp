@@ -4,18 +4,19 @@ package com.educationalapp.eduapp.educationalapp.registermodule
  * Created by michaelknight123 on 6/2/2017.
  */
 class RegisterAPI {
-    private var namaPanjang: String? = null
+    private var namaLengkap: String? = null
     private var email: String? = null
     private var username: String? = null
     private var password: String? = null
+    private var confirmpassword: String? = null
     private var grup: Int? = null
     private var peran: Int? = null
 
-    public fun setNamaPanjang(namaPanjang: String?) {
-        this.namaPanjang = namaPanjang
+    public fun setNamaLengkap(namaPanjang: String?) {
+        this.namaLengkap = namaPanjang
     }
-    public fun getNamaPanjang(): String? {
-        return this.namaPanjang
+    public fun getNamaLengkap(): String? {
+        return this.namaLengkap
     }
 
     public fun setEmail(email: String?) {
@@ -37,6 +38,13 @@ class RegisterAPI {
     }
     public fun getPassword(): String? {
         return this.password
+    }
+
+    public fun setConfirmPassword(confirmpassword: String?) {
+        this.confirmpassword = confirmpassword
+    }
+    public fun getConfirmPassword(): String? {
+        return this.confirmpassword
     }
 
     public fun setGrup(grup: Int?) {

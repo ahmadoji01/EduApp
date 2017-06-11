@@ -21,11 +21,13 @@ class Register1Fragment : Fragment(), RegisterContract.View {
 
     private var mStartButton: Button? = null
     private var mRegisterPresenter: RegisterPresenter? = null
+    private var mRegisterActivity: RegisterActivity? = null
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         var view: View = inflater!!.inflate(R.layout.fragment_register1, container, false)
         mStartButton = view.findViewById(R.id.FragmentRegister_start_btn) as Button
+        mRegisterActivity = activity as RegisterActivity
 
         mStartButton?.setOnClickListener(mStartButtonPressed)
 
@@ -34,20 +36,18 @@ class Register1Fragment : Fragment(), RegisterContract.View {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        mRegisterPresenter = RegisterPresenter(this, RegisterAPI())
+        mRegisterPresenter = RegisterPresenter(this, mRegisterActivity!!)
     }
 
-    override fun getNamaPanjang(): String { TODO("not implemented") }
+    override fun getNamaLengkap(): String { TODO("not implemented") }
     override fun getUsername(): String { TODO("not implemented") }
     override fun getPassword(): String { TODO("not implemented") }
+    override fun getConfirmPassword(): String { TODO("not implemented") }
     override fun getEmail(): String { TODO("not implemented") }
     override fun getGrup(): Int { TODO("not implemented") }
     override fun getPeran(): Int { TODO("not implemented") }
     override fun gotoRegisterPageThree() { TODO("not implemented") }
 
     private val mStartButtonPressed = View.OnClickListener { mRegisterPresenter?.onStartButtonClick() }
-    override fun gotoRegisterPageTwo() {
-        var registerActivity: RegisterActivity = activity as RegisterActivity
-        registerActivity.changePageTwo()
-    }
+    override fun gotoRegisterPageTwo() { mRegisterActivity?.changePageTwo() }
 }

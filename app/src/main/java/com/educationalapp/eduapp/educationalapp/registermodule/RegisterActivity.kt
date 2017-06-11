@@ -9,11 +9,15 @@ class RegisterActivity : AppCompatActivity() {
 
     private var registerPageOne: Register1Fragment? = null
     private var registerPageTwo: Register2Fragment? = null
+    private var registerPageThree: Register3Fragment? = null
+    public var registerAPI: RegisterAPI? = null
     private var registerPresenter: RegisterPresenter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
+
+        registerAPI = RegisterAPI()
 
         if(findViewById(R.id.register_fragment_container) != null) {
 
@@ -31,5 +35,11 @@ class RegisterActivity : AppCompatActivity() {
         registerPageTwo = Register2Fragment()
         supportFragmentManager.beginTransaction()
                 .replace(R.id.register_fragment_container, registerPageTwo).commit()
+    }
+
+    fun changePageThree() {
+        registerPageThree = Register3Fragment()
+        supportFragmentManager.beginTransaction()
+                .replace(R.id.register_fragment_container, registerPageThree).commit()
     }
 }
