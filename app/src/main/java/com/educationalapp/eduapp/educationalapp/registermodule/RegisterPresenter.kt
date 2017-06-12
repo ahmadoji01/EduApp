@@ -15,6 +15,7 @@ class RegisterPresenter(view: RegisterContract.View, registerActivity: RegisterA
     }
 
     fun onStartButtonClick() { view?.gotoRegisterPageTwo(); }
+
     fun onNextButtonOneClick() {
         var namaLengkap: String = view!!.getNamaLengkap()
         var email: String = view!!.getEmail()
@@ -29,5 +30,17 @@ class RegisterPresenter(view: RegisterContract.View, registerActivity: RegisterA
         registerActivity?.registerAPI?.setConfirmPassword(confirmPassword)
 
         view!!.gotoRegisterPageThree()
+    }
+    fun onNextButtonTwoClick() {
+        var peran: Int = view!!.getPeran()
+        registerActivity?.registerAPI?.setPeran(peran)
+
+        view!!.gotoRegisterPageFour()
+    }
+    fun onNextButtonThreeClick() {
+        var grup: Int = view!!.getGrup()
+        registerActivity?.registerAPI?.setGrup(grup)
+
+        view!!.gotoRegisterPageFive()
     }
 }

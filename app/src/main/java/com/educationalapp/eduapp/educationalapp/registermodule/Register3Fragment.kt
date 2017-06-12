@@ -35,8 +35,9 @@ class Register3Fragment : Fragment(), RegisterContract.View {
     private var mNextButton: Button? = null
 
     private var charList: MutableList<Int> = mutableListOf<Int>()
-    private var charListPointer: Int = 0
     private var charName: MutableList<String> = mutableListOf<String>()
+    private var charId: MutableList<Int> = mutableListOf<Int>()
+    private var charListPointer: Int = 0
 
     private var mRegisterPresenter: RegisterPresenter? = null
     private var mRegisterActivity: RegisterActivity? = null
@@ -54,8 +55,9 @@ class Register3Fragment : Fragment(), RegisterContract.View {
 
         populateChar()
 
-        mNavLeftImageView?.setOnClickListener(onNavLeftPressed)
-        mNavRightImageView?.setOnClickListener(onNavRightPressed)
+        mNavLeftImageView?.setOnClickListener(mNavLeftPressed)
+        mNavRightImageView?.setOnClickListener(mNavRightPressed)
+        mNextButton?.setOnClickListener(mNextButtonPressed)
 
         return view
     }
@@ -68,15 +70,17 @@ class Register3Fragment : Fragment(), RegisterContract.View {
     private fun populateChar() {
         charList.add(R.drawable.ic_apps_black_36dp)
         charName.add("Apps")
+        charId.add(1)
         charList.add(R.drawable.ic_cancel_black_36dp)
         charName.add("Cancel")
+        charId.add(2)
 
         mCharImageView?.setImageResource(charList.first())
         mCharName?.text = charName.first()
         charListPointer = 0
     }
 
-    private val onNavLeftPressed = View.OnClickListener {
+    private val mNavLeftPressed = View.OnClickListener {
         charListPointer--
         if(charListPointer < 0)
             charListPointer = charList.size - 1
@@ -84,7 +88,7 @@ class Register3Fragment : Fragment(), RegisterContract.View {
         mCharImageView?.setImageResource(charList[charListPointer])
         mCharName?.text = charName[charListPointer]
     }
-    private val onNavRightPressed = View.OnClickListener {
+    private val mNavRightPressed = View.OnClickListener {
         charListPointer++
         if(charListPointer >= charList.size)
             charListPointer = 0
@@ -93,16 +97,17 @@ class Register3Fragment : Fragment(), RegisterContract.View {
         mCharName?.text = charName[charListPointer]
     }
 
+    private val mNextButtonPressed = View.OnClickListener { mRegisterPresenter?.onNextButtonTwoClick() }
+    override fun gotoRegisterPageFour() { mRegisterActivity?.changePageFour() }
+    override fun getPeran(): Int { return charId[charListPointer] }
+
     override fun getNamaLengkap(): String { TODO("not implemented") }
     override fun getUsername(): String { TODO("not implemented") }
     override fun getPassword(): String { TODO("not implemented") }
     override fun getConfirmPassword(): String { TODO("not implemented") }
     override fun getEmail(): String { TODO("not implemented") }
     override fun getGrup(): Int { TODO("not implemented") }
-    override fun getPeran(): Int { TODO("not implemented") }
     override fun gotoRegisterPageTwo() { TODO("not implemented") }
     override fun gotoRegisterPageThree() { TODO("not implemented") }
     override fun gotoRegisterPageFive() { TODO("not implemented") }
-
-    override fun gotoRegisterPageFour() { TODO("not implemented") }
 }

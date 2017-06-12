@@ -15,4 +15,15 @@
     <string name="register_start_string">Ayo mulai petualanganmu sekarang!</string>
     <string name="start_string">Start</string>
     <string name="pilih_karakter_title_string">Pilih Karakter yang Akan Menemani Petualanganmu</string>
+    <string name="pilih_kelompok_title_string">Pilih Kelompok yang Cocok Denganmu</string>
+    <string name="register5_title_string">Siapkah Kamu dengan Petualangan Barumu Menggunakan Pilihan Berikut?</string>
+    <string name="nama_lengkap_string">Nama Lengkap</string>
+    <string name="email_string">Email</string>
+    <string name="username_string">Username</string>
+    <string name="password_string">Password</string>
+    <string name="confirm_password_string">Confirm Password</string>
+    <string name="peran_string">Peran</string>
+    <string name="grup_string">Grup</string>
+    <string name="ya_string">Ya</string>
+    <string name="tidak_string">Tidak</string>
 </resources>

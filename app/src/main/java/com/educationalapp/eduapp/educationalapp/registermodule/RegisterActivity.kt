@@ -10,6 +10,8 @@ class RegisterActivity : AppCompatActivity() {
     private var registerPageOne: Register1Fragment? = null
     private var registerPageTwo: Register2Fragment? = null
     private var registerPageThree: Register3Fragment? = null
+    private var registerPageFour: Register4Fragment? = null
+    private var registerPageFive: Register5Fragment? = null
     public var registerAPI: RegisterAPI? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,5 +44,15 @@ class RegisterActivity : AppCompatActivity() {
                 .replace(R.id.register_fragment_container, registerPageThree).commit()
     }
 
-    fun changePageFour() { }
+    fun changePageFour() {
+        registerPageFour = Register4Fragment()
+        supportFragmentManager.beginTransaction()
+                .replace(R.id.register_fragment_container, registerPageFour).commit()
+    }
+
+    fun changePageFive() {
+        registerPageFive = Register5Fragment()
+        supportFragmentManager.beginTransaction()
+                .replace(R.id.register_fragment_container, registerPageFive).commit()
+    }
 }

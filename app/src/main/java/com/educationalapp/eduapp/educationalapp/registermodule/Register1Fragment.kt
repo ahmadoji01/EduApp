@@ -39,6 +39,9 @@ class Register1Fragment : Fragment(), RegisterContract.View {
         mRegisterPresenter = RegisterPresenter(this, mRegisterActivity!!)
     }
 
+    private val mStartButtonPressed = View.OnClickListener { mRegisterPresenter?.onStartButtonClick() }
+    override fun gotoRegisterPageTwo() { mRegisterActivity?.changePageTwo() }
+
     override fun getNamaLengkap(): String { TODO("not implemented") }
     override fun getUsername(): String { TODO("not implemented") }
     override fun getPassword(): String { TODO("not implemented") }
@@ -49,7 +52,4 @@ class Register1Fragment : Fragment(), RegisterContract.View {
     override fun gotoRegisterPageThree() { TODO("not implemented") }
     override fun gotoRegisterPageFour() { TODO("not implemented") }
     override fun gotoRegisterPageFive() { TODO("not implemented") }
-
-    private val mStartButtonPressed = View.OnClickListener { mRegisterPresenter?.onStartButtonClick() }
-    override fun gotoRegisterPageTwo() { mRegisterActivity?.changePageTwo() }
 }

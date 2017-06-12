@@ -1,0 +1,27 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        a6c79eb8 com.educationalapp.eduapp.educationalapp/.loginmodule.LoginActivity filter a6c79f80
+ 
+Packages:
+  Package [com.educationalapp.eduapp.educationalapp] (a67e4520):
+    userId=10047 gids=[]
+    sharedUser=null
+    pkg=Package{a71cdd40 com.educationalapp.eduapp.educationalapp}
+    codePath=/data/app/com.educationalapp.eduapp.educationalapp-2.apk
+    resourcePath=/data/app/com.educationalapp.eduapp.educationalapp-2.apk
+    nativeLibraryPath=/data/app-lib/com.educationalapp.eduapp.educationalapp-2
+    versionCode=1
+    applicationInfo=ApplicationInfo{a71cddd8 com.educationalapp.eduapp.educationalapp}
+    flags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    versionName=1.0
+    dataDir=/data/data/com.educationalapp.eduapp.educationalapp
+    targetSdk=25
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2017-06-12 04:53:40
+    firstInstallTime=2017-05-25 13:39:50
+    lastUpdateTime=2017-06-12 04:53:40
+    signatures=PackageSignatures{a67c5aa0 [a67e4710]}
+    permissionsFixed=true haveGids=true installStatus=1
+    pkgFlags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    User 0:  installed=true stopped=false notLaunched=false enabled=0

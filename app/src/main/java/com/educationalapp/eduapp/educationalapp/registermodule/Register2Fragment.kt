@@ -51,17 +51,17 @@ class Register2Fragment : Fragment(), RegisterContract.View {
         mRegisterPresenter = RegisterPresenter(this, mRegisterActivity!!)
     }
 
+    private val mNextButtonPressed = View.OnClickListener { mRegisterPresenter?.onNextButtonOneClick() }
+    override fun gotoRegisterPageThree() { mRegisterActivity?.changePageThree() }
     override fun getNamaLengkap(): String { return mNamaLengkapEditText?.text.toString() }
     override fun getUsername(): String { return mUsernameEditText?.text.toString() }
     override fun getPassword(): String { return mPasswordEditText?.text.toString() }
     override fun getConfirmPassword(): String { return mConfirmPasswordEditText?.text.toString() }
     override fun getEmail(): String { return mEmailEditText?.text.toString() }
+
     override fun getGrup(): Int { TODO("not implemented") }
     override fun getPeran(): Int { TODO("not implemented") }
     override fun gotoRegisterPageTwo() { TODO("not implemented") }
     override fun gotoRegisterPageFour() { TODO("not implemented") }
     override fun gotoRegisterPageFive() { TODO("not implemented") }
-
-    private val mNextButtonPressed = View.OnClickListener { mRegisterPresenter?.onNextButtonOneClick() }
-    override fun gotoRegisterPageThree() { mRegisterActivity?.changePageThree() }
 }
