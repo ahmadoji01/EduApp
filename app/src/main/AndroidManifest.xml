@@ -20,6 +20,8 @@
         </activity>
         <activity android:name=".registermodule.RegisterActivity" />
         <activity android:name=".homemodule.HomeActivity" />
+        <activity android:name=".historymodule.HistoryActivity" />
+        <activity android:name=".siswamodule.SiswaActivity"></activity>
     </application>
 
 </manifest>

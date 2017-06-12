@@ -11,14 +11,6 @@ import android.widget.TextView
 
 import com.educationalapp.eduapp.educationalapp.R
 
-/**
- * A simple [Fragment] subclass.
- * Activities that contain this fragment must implement the
- * [Register4Fragment.OnFragmentInteractionListener] interface
- * to handle interaction events.
- * Use the [Register4Fragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class Register4Fragment : Fragment(), RegisterContract.View {
     private var mNavLeftImageView: ImageView? = null
     private var mNavRightImageView: ImageView? = null

@@ -15,15 +15,6 @@ import com.educationalapp.eduapp.educationalapp.homemodule.HomeActivity
 import com.educationalapp.eduapp.educationalapp.registermodule.RegisterActivity
 import org.w3c.dom.Text
 
-
-/**
- * A simple [Fragment] subclass.
- * Activities that contain this fragment must implement the
- * [LoginFragment.OnFragmentInteractionListener] interface
- * to handle interaction events.
- * Use the [LoginFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class LoginFragment : Fragment(), LoginContract.View {
 
     // TODO: Rename and change types of parameters

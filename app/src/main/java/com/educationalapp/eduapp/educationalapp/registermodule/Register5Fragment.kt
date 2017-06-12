@@ -10,14 +10,6 @@ import android.widget.EditText
 
 import com.educationalapp.eduapp.educationalapp.R
 
-/**
- * A simple [Fragment] subclass.
- * Activities that contain this fragment must implement the
- * [Register5Fragment.OnFragmentInteractionListener] interface
- * to handle interaction events.
- * Use the [Register5Fragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class Register5Fragment : Fragment(), RegisterContract.View {
     private var mRegisterPresenter: RegisterPresenter? = null
     private var mNamaLengkapEditText: EditText? = null

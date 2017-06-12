@@ -9,14 +9,6 @@ import android.widget.Button
 
 import com.educationalapp.eduapp.educationalapp.R
 
-/**
- * A simple [Fragment] subclass.
- * Activities that contain this fragment must implement the
- * [Register1Fragment.OnFragmentInteractionListener] interface
- * to handle interaction events.
- * Use the [Register1Fragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class Register1Fragment : Fragment(), RegisterContract.View {
 
     private var mStartButton: Button? = null
